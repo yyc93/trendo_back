@@ -1,0 +1,144 @@
+<div class="container-fluid">
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col">
+          <form>
+            <fieldset>
+              <legend>Personal Info</legend>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" ng-model="user.firstName">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" ng-model="user.lastName">
+                </div>
+              </div>  
+              <div class="row">
+              <div class="form-group col-md-6">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="user.phone" required>
+              </div>
+              </div>
+
+              <div class="row">
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="user.email" required>
+              </div> 
+              <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password" required>
+              </div> 
+              </div>                                                         
+
+            </fieldset><br><br>
+            <fieldset>
+
+              <legend>Business Info</legend>
+
+              <!-- <div class="form-group">
+                <label for="businessTitle">Title</label>
+                <input type="text" class="form-control" id="businessTitle" placeholder="Title" ng-model="user.businessTitle">
+              </div>   -->
+
+              <div class="form-group">
+                <label for="businessName">Business Name</label>
+                <input type="text" class="form-control" id="businessName" placeholder="Business Name" ng-model="user.businessName">
+            </div>  
+
+            <div class="form-group">
+                <label for="businessAddress">Business Address</label>
+                <input type="text" class="form-control" id="businessAddress" placeholder="Business Address" ng-model="user.businessAddress">
+            </div> 
+
+              <div class="form-group">
+              <label for="category">Select Category</label>
+              <select class="form-control" id="category" ng-model="user.category">
+                <option value="">Select Category</option>
+                <option value="Nightlife">Nightlife (clubs and bars)</option>
+                <option value="Restaurants">Restaurants</option>
+                <option value="Coffee and hookah lounge">Coffee and hookah lounge</option>
+                <option value="Sporting events">Sporting events</option>
+                <option value="Outdoor activities">Outdoor activities</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                  <label for="image01">Business Image 01</label>
+                  <input type="file" name="image01" class="form-control" id="image01"  file-model="user.file01" >
+            </div>
+            <div class="form-group">
+                  <label for="image02">Business Image 02</label>
+                  <input type="file" name="image02" class="form-control" id="image02"  file-model="user.file02" >
+            </div>
+            <div class="form-group">
+                  <label for="image03">Business Image 03</label>
+                  <input type="file" name="image03" class="form-control" id="image03"  file-model="user.file03" >
+            </div>
+            <div class="form-group">
+                  <label for="image04">Business Image 04</label>
+                  <input type="file" name="image04" class="form-control" id="image04"  file-model="user.file04" >
+            </div>
+            <div class="form-group">
+                  <label for="image05">Business Image 05</label>
+                  <input type="file" name="image05" class="form-control" id="image05"  file-model="user.file05" >
+            </div>
+            <div class="form-group">
+                  <label for="image05">Video Ad</label>
+                  <input type="file" name="image05" class="form-control" id="image05" file-model="user.file06" >
+            </div>
+
+            <div class="row">
+
+            <div class="form-group col-md-6">
+                <label for="businessYear">Business Start Year</label>
+                <input type="text" class="form-control" id="businessYear" placeholder="Business Year" ng-model="user.businessYear">
+            </div>  
+
+            <div class="form-group col-md-6">
+                <label for="businessDays">Business Days/Hours</label>
+                <input type="text" class="form-control" id="businessDays" placeholder="Business Days/Hours" ng-model="user.businessDays">
+            </div> 
+
+            </div>
+
+            <div class="row">
+            <div class="form-group col-md-6">
+                <label for="businessPhone">Phone</label>
+                <input type="text" class="form-control" id="businessPhone" placeholder="Business Phone" ng-model="user.businessPhone">
+            </div>  
+
+            <div class="form-group col-md-6">
+                <label for="businessEmail">Email</label>
+                <input type="email" class="form-control" id="businessEmail" placeholder="Business Email" ng-model="user.businessEmail" required>
+            </div>  
+
+            </div>
+            <div class="form-group">
+              <label for="businessDescription">Description</label>
+              <textarea class="form-control" id="businessDescription" rows="5" maxlength="150" ng-model="user.businessDescription">                
+              </textarea>
+            </div>
+
+            
+            </fieldset>            
+
+            <button ng-show="!user._id" type="submit" class="btn btn-primary btn-lg" ng-click="createBusiness(user)">
+              Sign Up
+            </button>
+            <button ng-show="user._id" type="submit" class="btn btn-primary" ng-click="updateBusiness(user._id)">
+              Save Changes
+            </button>
+          </form>
+
+        </div>
+      </div>
+  </div>  
+
+
+  
+</div>

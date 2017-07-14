@@ -1,0 +1,30 @@
+<div class="container-fluid"> 
+  <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <form>
+            <fieldset>
+              <legend>Admin Login</legend>
+                <div class="form-group">
+                  <label for="username">User Name</label>
+                  <input type="text" class="form-control" id="username" placeholder="User Name" ng-model="username" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="password" required>
+                </div>              
+            </fieldset>
+            
+            <button ng-show="!user._id" type="submit" class="btn btn-primary btn-lg" ng-click="adminSignin()">
+              Login
+            </button>
+            
+          </form>
+          <!-- {{user}} -->        
+        </div>
+      </div>
+  </div>  
+
+
+  
+</div>

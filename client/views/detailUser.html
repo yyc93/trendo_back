@@ -1,0 +1,103 @@
+
+<div class="container-fluid">
+	<!-- <h1>{{list}}</h1> -->	
+	<div class="container">
+		
+		<!-- <th></th> -->
+		<h1 style="text-align:center">Details Business User</h1>
+		
+		<div class="edit-button">
+			<a ng-show="isAuthenticate" ui-sref="editUser({id: user._id})" class="btn btn-primary btn-lg">Edit</a>
+		</div>
+		<ul class="list-group detail-user">
+
+		  <li class="list-group-item">
+		  	<p>First Name:</p>
+		   <span>{{user.firstName}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Last Name:</p> 
+		  	<span>{{user.lastName}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Email:</p> 
+		  	<span>{{user.email}}</span>
+		  </li>
+		  <li class="list-group-item">
+		    <p>Phone:</p> 
+		    <span>{{user.phone}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Name:</p>
+		    <span>{{user.businessName}}</span>
+		  </li>
+		  <!-- <li class="list-group-item">
+		    <p>Business Title:</p> 
+		    <span>{{user.businessTitle}}</span>
+		  </li> -->
+		  <li class="list-group-item">
+		  	<p>Category:</p> 
+		  	<span>{{user.category}}</span>
+		  </li>
+		  <!-- <li class="list-group-item">
+		  	<p>User Type:</p> 
+		  	<span>{{user.userType}}</span>
+		  </li> -->
+		  <li class="list-group-item">
+		  	<p>Business Images</p> 
+
+		  	<span ng-repeat="img in user.images"><img src="./server/uploads/{{img}}" class="business-images"></span>
+			<!-- <span ng-repeat="img in user.logoImage"><video src="./server/uploads/{{img}} controls"></video></span> -->
+
+		  </li>
+		  <li class="list-group-item" ng-if="user.videos.length > 0">
+		  	<p>Business Videos</p> 
+		  	<span ng-repeat="video in user.videos">
+		  		<video width="150" height="100" controls>
+				  <source src="./server/uploads/{{video}}" type="video/mp4">
+				  <source src="./server/uploads/{{video}}" type="video/ogg">
+				  <source src="./server/uploads/{{video}}" type="video/webm">
+				  <source src="./server/uploads/{{video}}" type="video/avi">
+				  <source src="./server/uploads/{{video}}" type="video/swf">
+				  <source src="./server/uploads/{{video}}" type="video/flv">
+				  <source src="./server/uploads/{{video}}" type="video/mkv">
+				  Your browser does not support the video tag.
+				</video>
+		  	</span>
+			
+
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Year:</p> 
+		  	<span>{{user.businessYear}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Days:</p> 
+		  	<span>{{user.businessDays}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Address:</p> 
+		  	<span>{{user.businessAddress}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Phone:</p> 
+		  	<span>{{user.businessPhone}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Email:</p> 
+		  	<span>{{user.businessEmail}}</span>
+		  </li>
+		  <li class="list-group-item">
+		  	<p>Business Description:</p> 
+		  	<span>{{user.businessDescription}}</span>
+		  </li>
+		</ul>
+			
+	</div>
+			
+	
+</div>
+
+
+
+

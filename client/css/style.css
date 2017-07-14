@@ -1,0 +1,78 @@
+body{
+	padding-top: 70px;
+}
+
+
+table{
+	border:10px;
+	padding-bottom: 50px;
+}
+tbody:{
+	margin-top: 20px;
+}
+
+th{
+	width: 200px;
+}
+td{
+	width: 200px !important;
+	height: 80px;
+}
+
+form{
+	padding: 20px 0 50px 0; 
+}
+.member {
+	padding-left: 10px;
+}
+
+.detail-user{
+	text-align: left;
+	/*display: block;*/
+}
+.detail-user > li{	
+    overflow:hidden;  
+    position: relative;
+    display: block;
+    /*vertical-align: middle;*/
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;   
+}
+
+.detail-user > li >p{
+	float: left;
+	width: 50%;
+}
+
+.detail-user>li>span {
+	/*padding-left: 20px;*/	
+	color: #555555;
+	font-weight: 600;
+	width: 50%;
+	/*margin: 20px 0 0 0;*/
+}
+
+.detail-user>li>span>video {
+	padding-bottom: 10px;
+}
+
+.logout-padding{
+	margin: 10px 15px 0 10px;
+}
+
+.edit-button{
+	text-align: right;
+	margin-bottom: 10px; 
+}
+
+
+.edit-button>a{
+	/*float: left;*/
+}
+.business-images{
+	 width:100px; 
+	 height:40px;
+	 margin: 0 10px 0 0;
+}

@@ -1,0 +1,56 @@
+<div class="container-fluid">	
+	<div class="container">
+		
+			<h1 style="text-align:center; margin-bottom: 20px; color: #555555;">All Registered Businesses
+			</h1>
+			
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-md-4">
+						<button class="btn btn-primary btn-block" ng-click="deleteAllAppUsers()">Delete All App Users</button>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-primary btn-block" ng-click="deleteAllCheckins()">Delete All Checkins</button>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-primary btn-block" ng-click="deleteAllBusiness()">Delete All Business Users</button>
+					</div>
+				</div>
+			</div>
+			<hr style="border: 2px solid #555555;">
+			<table class="table table-striped table-responsive">
+				<thead>					
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Status</th>
+						<th>Business Title</th>
+						<th>Category</th>	
+						<th>Details</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="user in userList">
+						<td>{{user.firstName}}</td>
+						<td>{{user.lastName}}</td>
+						<td>{{user.email}}</td>
+						<td ng-if="user.isActive == true">Active</td>
+						<td ng-if="user.isActive == false">Inactive</td>
+						<td>{{user.businessTitle}}</td>
+						<td>{{user.category}}</td>
+						<td>
+							<a type="button" ui-sref="detailUser({id: user._id})" class="btn btn-info" title="View User"> <i class="fa fa-info-circle"></i></a>
+							<a type="button" href='' ng-show="!user.isActive" ng-click="setActive(true, user._id)" class="btn btn-info" title="Aprove User">Approve</a>
+							<a type="button" href='' ng-show="user.isActive" ng-click="setActive(false, user._id)" class="btn btn-info" title="Aprove User">Inactive</a>
+						</td>				
+					</tr>
+				</tbody>
+			</table>	
+		
+	</div>	
+</div>
+
+
+
+
