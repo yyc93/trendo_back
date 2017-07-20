@@ -5,7 +5,8 @@ var mongoose = require('mongoose');
 // for connecting to mongoose
 //mongoose.connect('mongodb://localhost:27017/trendo');
 
-mongoose.connect('mongodb://trendo:trendo@ds157469.mlab.com:57469/trendo');
+//mongoose.connect('mongodb://trendo:trendo@ds157469.mlab.com:57469/trendo');
+mongoose.connect('mongodb://trendoapp:trendoapp@ds151232.mlab.com:51232/trendo');
 
 // for opening the connection
 
