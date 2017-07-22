@@ -8,7 +8,7 @@ var cluster = require("cluster");
 if (cluster.isMaster) {
   var numCPUs = require("os").cpus().length;
   for ( var i = 0; i < numCPUs; i += 1) {
-    cluster.schedulingPolicy = "none";
+    cluster.schedulingPolicy = cluster.SCHED_NONE;
     cluster.fork();
   }
 
