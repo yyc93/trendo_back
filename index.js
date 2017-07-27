@@ -57,12 +57,12 @@ else {
   // I am currently allowing all origins to access this api.
   app.all('*',
     function(req, res, next) {
-        // res.header("Content-Type",
-        //             "application/json");
+        res.header("Content-Type",
+                    "application/json");
         res.header("Access-Control-Allow-Origin",
                     "*");
-        // res.header("Access-Control-Allow-Headers",
-        //             "X-Requested-With,Content-Type");
+        res.header("Access-Control-Allow-Headers",
+                    "X-Requested-With,Content-Type");
         next();
     });
 
