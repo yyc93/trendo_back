@@ -46,26 +46,24 @@
 		  <li class="list-group-item">
 		  	<p>Business Images</p> 
 
-		  	<span ng-repeat="img in user.images"><img src="./server/uploads/{{img}}" class="business-images"></span>
+		  	<span ng-repeat="img in user.images"><img ng-src="./server/uploads/{{img}}" class="business-images"></span>
 			<!-- <span ng-repeat="img in user.logoImage"><video src="./server/uploads/{{img}} controls"></video></span> -->
 
 		  </li>
 		  <li class="list-group-item" ng-if="user.videos.length > 0">
 		  	<p>Business Videos</p> 
 		  	<span ng-repeat="video in user.videos">
-		  		<video width="150" height="100" controls>
-				  <source src="./server/uploads/{{video}}" type="video/mp4">
-				  <source src="./server/uploads/{{video}}" type="video/ogg">
-				  <source src="./server/uploads/{{video}}" type="video/webm">
-				  <source src="./server/uploads/{{video}}" type="video/avi">
-				  <source src="./server/uploads/{{video}}" type="video/swf">
-				  <source src="./server/uploads/{{video}}" type="video/flv">
-				  <source src="./server/uploads/{{video}}" type="video/mkv">
+		  		<!-- <video width="150" height="100" controls>
+				  <source ng-src="./server/uploads/{{video}}" type="video/mp4">
+				  <source ng-src="./server/uploads/{{video}}" type="video/ogg">
+				  <source ng-src="./server/uploads/{{video}}" type="video/webm">
+				  <source ng-src="./server/uploads/{{video}}" type="video/avi">
+				  <source ng-src="./server/uploads/{{video}}" type="video/swf">
+				  <source ng-src="./server/uploads/{{video}}" type="video/flv">
+				  <source ng-src="./server/uploads/{{video}}" type="video/mkv">
 				  Your browser does not support the video tag.
-				</video>
+				</video> -->
 		  	</span>
-			
-
 		  </li>
 		  <li class="list-group-item">
 		  	<p>Business Year:</p> 

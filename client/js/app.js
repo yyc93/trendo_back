@@ -93,7 +93,7 @@ var app = angular.module('trendoApp', ['ui.router'])
 
     // For details of business user
     .state('detailUser', {
-        url:'/detailUser/:id',
+        url:'/detailUser/{{id}}',
         cache: false,
         views: {
             'content@': {
