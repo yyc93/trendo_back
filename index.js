@@ -55,7 +55,7 @@ else {
   app.use(bodyParser.json({limit: '50mb'}));
 
   // I am currently allowing all origins to access this api.
-  app.all('*',
+  app.all('/api/*',
     function(req, res, next) {
         res.header("Content-Type",
                     "application/json");

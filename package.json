@@ -4,8 +4,8 @@
   "description": "This is web admin site and mobile backend api server for Trendo app",
   "main": "index.js",
   "scripts": {
-    "start_forever": "export PORT=80 && forever start -a --uid trendo-web index.js",
     "start": "node index.js",
+    "start_forever": "export PORT=80 && forever start -a --uid trendo-web index.js",
     "stop_forever": "forever stop trendo-web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
