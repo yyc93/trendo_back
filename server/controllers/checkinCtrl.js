@@ -107,6 +107,7 @@ module
 	        checkin.checkinType = req.body.checkinType;
 	        checkin.comment = req.body.comment; 
 	        checkin.fileUrl = req.body.fileUrl;
+	        checkin.thumbUrl = req.body.thumbUrl;
 	        checkin.dateTime = new Date();
 
 	        console.log(checkin);

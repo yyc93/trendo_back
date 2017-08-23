@@ -43,6 +43,10 @@ var checkinSchema = new Schema({
 			type: String,
 			required: false
 		},
+		thumbUrl:{
+			type: String,
+			required: false
+		},
 		checkinType: {
 			type: String,
 			required: false
