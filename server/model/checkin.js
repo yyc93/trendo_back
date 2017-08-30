@@ -15,7 +15,7 @@ var checkinSchema = new Schema({
 		_userID: {
 			type: Schema.Types.ObjectId,
 			ref: 'User'
-		},		
+		},
 		placeName: {
 			type: String,
 			required: false
@@ -55,6 +55,12 @@ var checkinSchema = new Schema({
 			type: String,
 			required: false
 		},
+		_postComments:  [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'Comments'
+			}
+		],
 		dateTime: {
 			type: Date,
 			required: false

@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var User = require('../model/user.js');
 var Business = require('../model/business.js');
 var Checkin = require('../model/checkin.js');
+var PostComment = require('../model/post_comments.js');
 
 var express = require('express');
 var router = express.Router();
@@ -13,6 +14,7 @@ var router = express.Router();
 var userService = require('../controllers/usersCtrl.js');
 var businessService = require('../controllers/businessCtrl.js');
 var checkinService = require('../controllers/checkinCtrl.js');
+var postCommentService = require('../controllers/postCommentCtrl.js');
 
 module.exports = function(app) {
 
@@ -61,6 +63,8 @@ module.exports = function(app) {
 	router.get('/businessAds', businessService.findRandomBusiness);
 	
 	router.post('/checkin', checkinService.createCheckin);
+	router.post('/checkin/comment/newcomment', checkinService.createNewPostComment);
+	router.get('/checkin/comment/:checkin_id', checkinService.getPostCommentCheckin);
 	router.delete('/checkin', checkinService.deleteAllCheckins);
 	router.get('/user-checkin/:user_id', checkinService.getUserCheckin);
 	router.get('/business-checkin/:businessId', checkinService.getBusinessCheckin);
@@ -69,7 +73,8 @@ module.exports = function(app) {
 	router.post('/upload/:checkin_id', checkinService.updateSingleCheckin);
 	router.get('/checkin/delete/:checkin_id', checkinService.deleteCheckin);
 	
-
+	// router.get('/comment/:checkin_id', postCommentService.getPostCommentCheckin);
+	// router.post('/comment/newpost', postCommentService.createPostComment);
 	
     // REGISTER OUR ROUTES -------------------------------
 	// all of our routes will be prefixed with /api
