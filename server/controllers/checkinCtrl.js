@@ -105,6 +105,7 @@ module
 		checkin.latitude= req.body.latitude;
 		checkin.longitude = req.body.longitude;	 
 		checkin.checkinType = req.body.checkinType;
+		checkin.categories = req.body.categories; 
 		checkin.comment = req.body.comment; 
 		checkin.fileUrl = req.body.fileUrl;
 		checkin.thumbUrl = req.body.thumbUrl;

@@ -51,6 +51,10 @@ var checkinSchema = new Schema({
 			type: String,
 			required: false
 		},
+		categories: [{
+			type: String,
+			required: false
+		}],
 		comment: {
 			type: String,
 			required: false
